@@ -1,0 +1,30 @@
+{
+    "group_1": {
+        "train": {
+            "find_phone": [
+                "i need help finding my mobile phone",
+                "could you help me locate my phone"
+            ]
+        },
+        "test": {
+            "find_phone": [
+                "could you help me locate my phone",
+                "can you help me find my phone, please"
+            ]
+        }
+    },
+    "group_2": {
+        "train": {
+            "find_phone": [
+                "could you help me locate my phone",
+                "i need help finding my mobile phone"
+            ]
+        },
+        "test": {
+            "find_phone": [
+                "could you help me locate my phone",
+                "can you help me find my phone, please"
+            ]
+        }
+    }
+}
