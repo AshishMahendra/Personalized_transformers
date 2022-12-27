@@ -1,14 +1,15 @@
 from torch.utils.data import Dataset
 
-
+intent_list=sorted(["normal","hatespeech","offensive"])
 def format_data(raw):
+    global intent_list
     texts = []
     labels = []
-    intent = sorted(list(raw.keys()))
+    # intent_list = sorted(list(raw.keys()))
     for label, data in raw.items():
         for text in data:
             texts.append(text)
-            labels.append(intent.index(label))
+            labels.append(intent_list.index(label))
     return texts, labels
 
 
@@ -27,7 +28,7 @@ class Transform_Dataset(Dataset):
         self.text = text
         self.tokenizer = tokenizer
         self.label = label
-        self.unique_labels=list(set(label))
+        self.unique_labels=intent_list
 
     def __len__(self):
         return len(self.text)
